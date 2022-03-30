@@ -1,0 +1,114 @@
+body {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #fff2d5;
+}
+header {
+  width: 100%;
+  height: 300px;
+  background-color: #42356d;
+}
+h2 {
+  text-align: center;
+  color: #42356d;
+}
+#login_img {
+  width: 40%;
+  height: auto;
+  position: relative;
+  top: 320px;
+  left: 16%;
+}
+.login-form {
+  background-color: #fcf5e6;
+  width: 25%;
+  height: 485px;
+  position: relative;
+  left: 60%;
+  top: -127px;
+  border-radius: 11px;
+  box-shadow: 10px 19px 15px darkgrey;
+}
+.form-style {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 13%;
+}
+input {
+  padding-left: 25px;
+  font-size: medium;
+  width: 84%;
+  height: 42px;
+  border-radius: 6px;
+  border: 0.3px solid gray;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.btn-login {
+  font-size: 22px;
+  background-color: #5297c0;
+  font-weight: 700;
+  color: aliceblue;
+  text-align: center;
+}
+a {
+  padding-left: 0%;
+}
+.pay-btn {
+  width: 54%;
+  background-color: #ffbe3a;
+  font-size: 18px;
+  font-weight: 600;
+}
+#visa {
+  width: 79px;
+  height: 55px;
+  position: relative;
+  top: 21px;
+  left: 5%;
+}
+.danger {
+  background-color: red;
+  width: 100%;
+  height: 20px;
+}
+b {
+  margin-left: 25px;
+}
+#rem-me {
+  width: 20px;
+  height: auto;
+}
+span {
+  padding-left: 41px;
+  color: red;
+}
+
+.login_validation {
+  display: flex;
+  font-size: 16px;
+  color: red;
+  margin-left: 25px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+#logo {
+  position: absolute;
+  top: 30px;
+  left: 38%;
+}
+
+.successful_register {
+  position: relative;
+  font-size: 23px;
+  color: green;
+  margin-left: 25px;
+  font-weight: 600;
+  top: 40px;
+}

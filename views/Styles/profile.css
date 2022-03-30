@@ -1,0 +1,164 @@
+body {
+  font-family: monospace;
+  font-size: 24px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0;
+  background-color: #42356d;
+}
+
+.card-info {
+  width: 27%;
+  height: auto;
+  display: inline-grid;
+  background-color: #fcf5e6;
+  justify-content: space-around;
+  justify-items: center;
+  border-radius: 24px;
+  padding: 26px;
+  box-shadow: 10px 19px 15px darkgrey;
+  position: absolute;
+  left: 20%;
+  top: 15%;
+}
+
+img {
+  box-shadow: 4px 12px 24px darkgrey;
+  border-radius: 113px;
+  margin-bottom: 21px;
+}
+
+input {
+  border: none;
+  /* border-bottom: 2px solid gray; */
+  background-color: #f0f8ff;
+}
+
+input {
+  width: 300px;
+  height: 33px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+#edit {
+  height: 40px;
+  background-color: #42356d;
+  margin-top: 22px;
+  font-size: 20px;
+  color: aliceblue;
+  border: none;
+}
+
+.counter {
+  background-image: linear-gradient(
+    #ff0000db,
+    orange,
+    #ffff00de,
+    #32af3285,
+    #0000ff08,
+    indigo,
+    #ee82ee6e
+  );
+  position: relative;
+  left: 60%;
+  top: 80px;
+  width: 232px;
+  height: 237px;
+  border-radius: 120px;
+}
+
+.small-circle {
+  width: 205px;
+  height: 205px;
+  border-radius: 112px;
+  position: relative;
+  left: 6%;
+  top: 16px;
+  background-color: #42356d;
+}
+
+p {
+  font-size: 83px;
+  color: aliceblue;
+  position: relative;
+  top: 24%;
+  left: 36%;
+  width: fit-content;
+}
+
+span {
+  color: aliceblue;
+  position: relative;
+  top: 35%;
+  left: 10%;
+}
+
+label {
+  display: inline-block;
+  width: 180px;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+#old_email {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+
+.card-info input {
+  border: 0.3px solid gray;
+  width: 200px;
+  border-radius: 30px;
+  padding: 0px;
+  margin: 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.update_errors {
+  display: flex;
+  justify-content: space-evenly;
+
+  font-size: 18px;
+  color: red;
+  margin-left: 20px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+#submit {
+  width: 90px;
+  height: 40px;
+  font-size: 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff6c6c;
+  color: aliceblue;
+}
+
+#back_btn {
+  width: 90px;
+  height: 40px;
+  font-size: 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #202a8b;
+  color: aliceblue;
+}
+
+.card-info div {
+  margin: 10px;
+}
+
+#buttons_div {
+  display: flex;
+  justify-content: space-evenly;
+}

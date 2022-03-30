@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="views/Styles/download.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Download page</title>
+</head>
+
+<body>
+    <header>
+        <div class="email_area">
+            <div class="email_label"> Your Email</div>
+            <?php
+            echo "<div class=\"user_email\"> $current_user_email </div>";
+            ?>
+        </div>
+        <img id="logo" src="views/Resources/Logo.png" alt="logo-img" />
+        <nav>
+            <!-- sending user to login page after destroying session and cookie -->
+            <form action="login.php" method="post">
+                <button id="logout" type="submit" name="logout_request" value="logout">
+                Logout
+                <i class="fa fa-sign-out"></i>
+            </button>
+            </form>
+            <button id="profile_edit" onclick="window.location.href='profile.php'"> Edit profile </button>
+        </nav>
+    </header>
+    <div class="product">
+        <div class="details">
+            <h3>Product Name: XYZ software</h3>
+            <h3>File Size: 1 MB</h3>
+            <a id="download_link" href="helpers/download_limit_handler.php" <?php if ($download_order->get_count($current_user_id) <= 7) { ?>
+            onclick = "window.open('<?php echo("http://localhost/".$project_folder_name."/helpers/download_initiator.php") ?>');"
+          <?php } ?>
+        >
+          Download here
+        </a>
+
+            <?php
+        echo "<div class=\"download_limit_error\"> $download_limit_error </div>";
+        ?>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

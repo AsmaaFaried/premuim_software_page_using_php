@@ -1,0 +1,138 @@
+body {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #fff2d5;
+  height: 750px;
+}
+
+header {
+  width: 100%;
+  height: 300px;
+  background-color: #42356d;
+}
+
+h2 {
+  margin-left: 20px;
+  display: flex;
+  text-align: center;
+  color: #42356d;
+}
+
+.container{
+  height: 800px;
+}
+
+#register {
+  width: 40%;
+  height: auto;
+  position: relative;
+  top: 218px;
+  left: 16%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #fcf5e6;
+  width: 25%;
+  height: 750px;
+  position: relative;
+  left: 60%;
+  top: -170px;
+  border-radius: 11px;
+  box-shadow: 10px 19px 15px darkgrey;
+}
+
+.form-style {
+  display: block;
+  width: 100%;
+  height: 500px;
+  position: relative;
+  top: 3%;
+}
+
+input {
+  display: flex;
+  padding-left: 25px;
+  font-size: medium;
+  width: 84%;
+  height: 42px;
+  border-radius: 6px;
+  border: 0.3px solid gray;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+#div1 {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0px;
+  font-size: medium;
+  width: 84%;
+  height: 42px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+#ex {
+  width: 50%;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+#sec {
+  width: 20%;
+  margin-top: 0px;
+}
+
+.btn-login {
+  display: flex;
+  background-color: #5297c0;
+  font-weight: 700;
+  color: aliceblue;
+  text-align: center;
+}
+
+.pay-btn {
+  display: flex;
+  width: 140px;
+  background-color: #ffbe3a;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-left: 35%;
+}
+
+#visa {
+  width: 79px;
+  height: 55px;
+  position: relative;
+  top: 21px;
+  left: 5%;
+}
+
+p {
+  padding-left: 20%;
+}
+
+#register {
+  width: 31%;
+  height: auto;
+}
+
+.register_validation_errors {
+  display: flex;
+  font-size: 18px;
+  color: red;
+  margin-left: 20px;
+  font-weight: 600;
+}
+
+#logo{
+  position: absolute;
+  top: 30px;
+  left:38%;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="views/Styles/login.css">
+      <title>Login</title>
+    </head>
+
+  <body>
+    <div class="container">
+        <header>
+        <img id="logo" src="views/Resources/Logo.png" alt="logo-img"/>
+        <img id="login_img" src="views/Resources/back.jpg" alt="Image">
+        </header>
+
+        <div class="login-form">
+            <?php 
+             if($_SESSION["register_successful"] == true){
+                echo "<div class=\"successful_register\" div> You have registered successfully! </div>\n";
+              }
+              $_SESSION["register_successful"] = false;
+            ?>
+            <form class="form-style" action="" method="post" enctype="multipart/form-data">
+                <h2>Login</h2>
+                <input
+                type="text"
+                placeholder="Enter email"
+                name="email"
+                required
+                value="<?php
+                if (isset($_COOKIE["user_email"])) {
+                    echo $_COOKIE["user_email"];
+                } ?>">
+
+                <input
+                type="password"
+                placeholder="Enter password"
+                name="password"
+                required
+                value="<?php
+                if (isset($_COOKIE["password"])) {
+                echo $_COOKIE["password"];
+                } ?>">
+                <br>
+                <input
+                id="rem-me"
+                type="checkbox"
+                value="Remember me"
+                name="remember-me"
+                <?php if (isset($_COOKIE["user_email"])) { ?>
+                checked
+                <?php } ?>>
+                <label for="rem-me">Remember me</label><br>
+                <input class="btn-login" type="submit" name="login" value="Login"><br><br>
+
+                <b>Not registered? </b> <a href="register.php">Create new account here.</a>
+
+                <?php
+                    echo "<div class=\"login_validation\"> $login_error </div>\n";
+                ?>
+            </form>
+        </div>
+    </div>
+  </body>
+</html>

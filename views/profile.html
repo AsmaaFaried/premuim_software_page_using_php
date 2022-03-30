@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="views/Styles/profile.css" />
+    <title>Profile</title>
+  </head>
+
+  <body>
+    <div class="card-info">
+      <img
+        src="views/Resources/profile.png"
+        alt="profile-img"
+        style="z-index: 5"
+      />
+      <!-- Email to be fixed -->
+      <form id="form" action="profile.php" method="POST">
+        <div>
+          <label for="old_email">current Email:</label>
+          <label name="old_email" type="text" id="old_email"
+            ><?php echo($user->show_user_email($_SESSION["user_id"])); ?>
+          </label>
+          <br />
+        </div>
+        <div>
+          <label for="email ">new email</label>
+          <input
+            name="email"
+            type="text "
+            id="new_email"
+            placeholder="enter your new email"
+          /><br />
+        </div>
+    <br />
+        <div>
+          <label for="old_password">current password:</label>
+          <input
+            name="old_password"
+            type="password"
+            id="old_password"
+            placeholder="enter your password"
+          /><br />
+        </div>
+        <div>
+          <label for="password">new password</label>
+          <input name="password" type="password" id="passwordNew" />
+        </div>
+        <div>
+          <label for="confirm_new_password">confirm new password</label>
+          <input
+            name="confirm_new_password"
+            type="password"
+            id="passwordConfirm"
+          />
+        </div>
+       <div id="buttons_div">
+        <button id="submit" type="submit" name="submit">edit</button>
+        <button id="back_btn" onclick="window.location.href='login.php'">Back</button>
+       </div>
+        
+        <?php
+        foreach ($update_errors_arr as $error) {
+        echo "<div class=\"update_errors\"> $error </div>\n";
+      };?>
+      </form>
+    </div>
+    <div class="counter">
+      <div class="small-circle">
+        <p><?php echo($order->get_count($_SESSION["user_id"])-1)?></p>
+        <span> Download Count</span>
+      </div>
+    </div>
+  </body>
+</html>

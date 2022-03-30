@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="views/Styles/register.css" />
+
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="container">
+        <header>
+          <img id="logo" src="views/Resources/Logo.png" alt="logo-img"/>
+          <img id="register" src="views/Resources/register.png" alt="Image" />
+        </header>
+      <div class="login-form">
+        <form class="form-style" action="register.php" method="post">
+          <h2>Register & Get it now!</h2>
+          <input type="text" placeholder="Enter username" name="username" value="<?php echo isset($_POST["username"]) ? ($_POST["username"]) : ""; ?>"/>
+          <input type="text" placeholder="Enter email" name="email" value="<?php echo isset($_POST["email"]) ? ($_POST["email"]) : ""; ?>"/>
+          <input type="text" placeholder="Name on card" name="cardName" value="<?php echo isset($_POST["cardName"]) ? ($_POST["cardName"]) : ""; ?>"/>
+          <input
+            type="text"
+            placeholder="Enter card number"
+            name="cardNumber"
+            value="<?php echo isset($_POST["cardNumber"]) ? ($_POST["cardNumber"]) : ""; ?>"
+          />
+          <div id="div1">
+            <input
+              id="ex"
+              type="text"
+              placeholder="Expiration (mm/yy)"
+              name="expirationDate"
+              value="<?php echo isset($_POST["expirationDate"]) ? ($_POST["expirationDate"]) : ""; ?>"
+            />
+            <input id="sec" type="text" placeholder="CVV" name ="cvv" value="<?php echo isset($_POST["cvv"]) ? ($_POST["cvv"]) : ""; ?>"/>
+          </div>
+
+          <input type="password" placeholder="Enter password" name="password" value="<?php echo isset($_POST["password"]) ? ($_POST["password"]) : ""; ?>"/>
+          <input
+            type="password"
+            placeholder="Confirm password"
+            name="passwordConfirm"
+            value="<?php echo isset($_POST["passwordConfirm"]) ? ($_POST["passwordConfirm"]) : ""; ?>"
+          />
+          <input
+            class="pay-btn"
+            type="submit"
+            value="Purchase"
+            name="submit"
+          />
+          <p>
+            Already have an account?
+            <a href="login.php"><strong>Login instead</strong></a>
+          </p>
+
+          <?php
+            foreach ($register_validation_errors_arr as $error) {
+            echo "<div class=\"register_validation_errors\"> $error </div>\n";
+          };?>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
